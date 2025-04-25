@@ -1,0 +1,865 @@
+/* Responsive styles for Heritage Concrete Delivery Ticket */
+/* These styles will only apply on smaller screens and won't affect desktop layout */
+
+/* General responsive adjustments */
+@media (max-width: 1024px) {
+    .ticket-container {
+        max-width: 100% !important;
+        padding: 10px !important;
+    }
+}
+
+/* Mobile Responsive Styles for Heritage Concrete Delivery Ticket */
+
+/* Mobile Styles (768px and below) */
+@media (max-width: 768px) {
+
+    /* Main container adjustments */
+    .ticket-body {
+        padding: 8px !important;
+    }
+
+    .ticket-container {
+        padding: 0 !important;
+    }
+
+    /* Header section */
+    .header-section {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 5px !important;
+    }
+
+    .logo-container,
+    .company-info,
+    .contact-container {
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 10px !important;
+    }
+
+    .logo-image {
+        margin: 0 auto !important;
+        display: block !important;
+        max-width: 80px !important;
+    }
+
+    .contact-info {
+        text-align: center !important;
+    }
+
+    /* Main content section */
+    .main-content {
+        flex-direction: column !important;
+    }
+
+    .left-column,
+    .middle-column,
+    .right-column {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    .left-column {
+        padding-top: 0 !important;
+    }
+
+    /* Form rows - position labels in top-left corner */
+    .form-row {
+        border: 1px solid #2e8b57 !important;
+        margin-bottom: 5px !important;
+        height: auto !important;
+        min-height: 50px !important;
+        position: relative !important;
+        padding-top: 25px !important;
+        /* Space for the label */
+    }
+
+    .form-label {
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+    }
+
+    .checkbox-group {
+        position: absolute !important;
+        top: 5px !important;
+        right: 5px !important;
+        flex-direction: row !important;
+        gap: 15px !important;
+    }
+
+    .checkbox-item {
+        margin-bottom: 0 !important;
+    }
+
+    /* Warning boxes */
+    .warning-box {
+        width: 100% !important;
+        margin-bottom: 8px !important;
+    }
+
+    .caution-box {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Time rows - position labels in top-left corner */
+    .right-column {
+        border: none !important;
+    }
+
+    .time-row {
+        border: 1px solid #2e8b57 !important;
+        margin-bottom: 5px !important;
+        height: auto !important;
+        min-height: 50px !important;
+        position: relative !important;
+        padding-top: 25px !important;
+        /* Space for the label */
+    }
+
+    /* Move existing labels to top-left */
+    .time-row>div:first-child,
+    .time-row:first-child {
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        width: auto !important;
+        height: auto !important;
+        font-weight: bold !important;
+    }
+
+    .time-value {
+        margin-top: 10px !important;
+    }
+
+    /* Bottom section */
+    .bottom-section {
+        flex-direction: column !important;
+        height: auto !important;
+        position: static !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Move ARRIVE PLANT into WAITING TIME div */
+    .arrive-plant {
+        display: none !important;
+        /* Hide the original */
+    }
+
+    /* Add ARRIVE PLANT to WAITING TIME */
+    .time-row.waiting-time::after {
+        content: "ARRIVE PLANT" !important;
+        display: block !important;
+        position: absolute !important;
+        top: 5px !important;
+        right: 5px !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        color: #139a6e !important;
+    }
+
+    .water-added {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        border: 1px solid #139a6e !important;
+        min-height: 50px !important;
+        position: relative !important;
+        padding-top: 25px !important;
+    }
+
+    .water-added-label {
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+    }
+
+    .water-added-details {
+        margin-top: 10px !important;
+    }
+
+    .signature-section {
+        width: 100% !important;
+        position: static !important;
+        margin: 15px 0 !important;
+        text-align: center !important;
+    }
+
+    /* Order details section */
+    .order-header {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    .header-cell {
+        width: 100% !important;
+        min-height: 40px !important;
+        position: relative !important;
+        padding-top: 0 !important;
+        border-right: none !important;
+        text-align: left !important;
+        padding-left: 5px !important;
+    }
+
+    .customer-info {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    .sold-to,
+    .deliver-to,
+    .driver-info {
+        width: 100% !important;
+        border: 1px solid #139a6e !important;
+        margin-bottom: 5px !important;
+        min-height: 50px !important;
+        position: relative !important;
+        padding-top: 25px !important;
+    }
+
+    /* Hide original text to prevent duplication */
+    .sold-to>div,
+    .deliver-to>div,
+    .driver-info>div:first-child {
+        font-size: 0 !important;
+        /* Hide text but keep element */
+    }
+
+    /* Add labels back with proper positioning */
+    .sold-to::before {
+        content: "SOLD TO" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .deliver-to::before {
+        content: "DELIVER TO" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .driver-info::before {
+        content: "DRIVER" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    /* Product details - ensure QUANTITY THIS LOAD is visible */
+    .product-details {
+        border: none !important;
+        margin-bottom: 15px !important;
+    }
+
+    .product-header {
+        display: none !important;
+        /* Hide the header row */
+    }
+
+    .product-data {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    /* Create individual rows for each product field with labels */
+    .product-cell {
+        width: 100% !important;
+        min-height: 50px !important;
+        border: 1px solid #139a6e !important;
+        margin-bottom: 5px !important;
+        position: relative !important;
+        padding-top: 25px !important;
+    }
+
+    /* Add labels to product cells without duplication */
+    .product-cell:nth-child(1)::before {
+        content: "QUANTITY THIS LOAD" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .product-cell:nth-child(2)::before {
+        content: "QUANTITY ORDERED" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .product-cell:nth-child(3)::before {
+        content: "QUANTITY DELIVERED" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .product-cell:nth-child(4)::before {
+        content: "PRODUCT CODE" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .product-cell:nth-child(5)::before {
+        content: "PRODUCT DESCRIPTION" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .product-cell:nth-child(6)::before {
+        content: "UNIT OF MEASURE" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .product-cell:nth-child(7)::before {
+        content: "UNIT PRICE" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .product-cell:nth-child(8)::before {
+        content: "EXTENDED PRICE" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    /* Totals section */
+    .totals-section {
+        margin-top: 15px !important;
+    }
+
+    .totals-row,
+    .final-row {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        border: none !important;
+    }
+
+    .totals-cell,
+    .final-cell {
+        width: 100% !important;
+        min-height: 50px !important;
+        border: 1px solid #139a6e !important;
+        margin-bottom: 5px !important;
+        position: relative !important;
+        padding-top: 25px !important;
+        /* Hide original text to prevent duplication */
+        font-size: 0 !important;
+    }
+
+    /* Add labels to totals cells */
+    .totals-cell:nth-child(1)::before {
+        content: "TRUCK" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .totals-cell:nth-child(2)::before {
+        content: "PLANT" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .totals-cell:nth-child(3)::before {
+        content: "SLUMP" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .totals-cell:nth-child(4)::before {
+        content: "DUE AT JOB" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .totals-cell:nth-child(5)::before {
+        content: "USE OF CONCRETE" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .totals-cell.waiting-time::before {
+        content: "WAITING TIME" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .totals-cell.waiting-time span {
+        position: absolute !important;
+        top: 5px !important;
+        left: 90px !important;
+        font-size: 10px !important;
+        color: #139a6e !important;
+    }
+
+    /* Add labels to final cells */
+    .final-cell:nth-child(1)::before {
+        content: "ACCEL" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .final-cell:nth-child(2)::before {
+        content: "AIR ENTRAIN" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .final-cell:nth-child(3)::before {
+        content: "SUPER PLAS." !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .final-cell.ids::before {
+        content: "TWO I.D.S. FOR C.O.D DELIVERY" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+        white-space: nowrap !important;
+    }
+
+    .final-cell.tax-total::before {
+        content: "TAX" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .final-cell.tax-total span {
+        position: absolute !important;
+        top: 5px !important;
+        left: 30px !important;
+        font-size: 10px !important;
+        color: #139a6e !important;
+    }
+
+    /* Instructions sections */
+    .delivery-instructions,
+    .special-instructions {
+        width: 100% !important;
+        min-height: 50px !important;
+        border: 1px solid #139a6e !important;
+        margin-bottom: 5px !important;
+        position: relative !important;
+        padding-top: 25px !important;
+        /* Hide original text to prevent duplication */
+        font-size: 0 !important;
+    }
+
+    .delivery-instructions::before {
+        content: "DELIVERY INSTRUCTIONS" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .special-instructions::before {
+        content: "SPECIAL INSTRUCTIONS" !important;
+        position: absolute !important;
+        top: 5px !important;
+        left: 5px !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    /* Fix for header cells */
+    .header-cell {
+        font-size: 0 !important;
+        /* Hide original text */
+    }
+
+    .header-cell:nth-child(1)::before {
+        content: "CUSTOMER ID" !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .header-cell:nth-child(2)::before {
+        content: "P.O. NUMBER" !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .header-cell:nth-child(3)::before {
+        content: "ZONE" !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .header-cell:nth-child(4)::before {
+        content: "JOB NUMBER" !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .header-cell:nth-child(5)::before {
+        content: "TIME" !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .header-cell:nth-child(6)::before {
+        content: "DATE" !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+
+    .header-cell:nth-child(7)::before {
+        content: "TICKET" !important;
+        font-size: 11px !important;
+        color: #139a6e !important;
+        font-weight: bold !important;
+    }
+}
+
+/* Smaller Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+    .ticket-body {
+        padding: 5px !important;
+    }
+
+    .company-name {
+        font-size: 24px !important;
+    }
+
+    .company-type {
+        font-size: 12px !important;
+    }
+
+    .company-address,
+    .contact-info {
+        font-size: 10px !important;
+    }
+
+    /* Increase height of input fields for better touch */
+    .form-row,
+    .time-row,
+    .product-cell,
+    .totals-cell,
+    .final-cell,
+    .sold-to,
+    .deliver-to,
+    .driver-info,
+    .delivery-instructions,
+    .special-instructions {
+        min-height: 60px !important;
+    }
+}
+
+/* Mobile Styles (576px and below) */
+@media (max-width: 576px) {
+    .ticket-body {
+        padding: 5px !important;
+        font-size: 11px !important;
+    }
+
+    /* Header adjustments for mobile */
+    .company-name {
+        font-size: 24px !important;
+    }
+
+    .company-type {
+        font-size: 12px !important;
+    }
+
+    .company-address,
+    .contact-info {
+        font-size: 10px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Make all cells full width on mobile */
+    .header-cell {
+        width: 100% !important;
+        border-right: none !important;
+    }
+
+    /* Adjust form rows */
+    .form-row {
+        padding: 8px 5px !important;
+    }
+
+    .checkbox-item {
+        margin-bottom: 3px !important;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        transform: scale(1) !important;
+        margin-right: 5px !important;
+    }
+
+    .checkbox-item label {
+        font-size: 11px !important;
+    }
+
+    /* Adjust warning text */
+    .warning-text {
+        font-size: 14px !important;
+    }
+
+    .warning-text-large {
+        font-size: 16px !important;
+    }
+
+    /* Adjust disclaimer text */
+    .disclaimer-text {
+        font-size: 11px !important;
+        padding: 0 5px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Adjust caution box */
+    .caution-box {
+        flex-direction: column !important;
+        padding: 8px 5px !important;
+    }
+
+    .caution-label {
+        width: 100% !important;
+        margin-bottom: 5px !important;
+        justify-content: flex-start !important;
+        font-size: 12px !important;
+    }
+
+    .caution-text {
+        width: 100% !important;
+        font-size: 11px !important;
+    }
+
+    /* Time rows */
+    .time-row {
+        padding: 8px 5px !important;
+        font-size: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Signature section */
+    .signature-line,
+    .signature-label {
+        font-size: 16px !important;
+        text-align: center !important;
+    }
+
+    /* Adjust water added section */
+    .water-added-details {
+        flex-direction: column !important;
+    }
+
+    .water-added-label {
+        font-size: 12px !important;
+    }
+
+    /* Product details */
+    .product-data {
+        grid-template-columns: 1fr !important;
+        /* Single column on small mobile */
+    }
+
+    /* Totals section */
+    .totals-row,
+    .final-row {
+        grid-template-columns: 1fr !important;
+        /* Single column on small mobile */
+    }
+
+    .totals-cell,
+    .final-cell {
+        font-size: 11px !important;
+    }
+
+    .totals-cell.waiting-time,
+    .final-cell.tax-total,
+    .final-cell.ids {
+        grid-column: span 1 !important;
+    }
+}
+
+/* Extra Small Mobile Styles (375px and below) */
+@media (max-width: 375px) {
+    .ticket-body {
+        padding: 3px !important;
+        font-size: 10px !important;
+    }
+
+    .company-name {
+        font-size: 20px !important;
+    }
+
+    .company-type {
+        font-size: 10px !important;
+    }
+
+    .company-address,
+    .contact-info {
+        font-size: 9px !important;
+    }
+
+    .warning-text {
+        font-size: 12px !important;
+    }
+
+    .warning-text-large {
+        font-size: 14px !important;
+    }
+
+    .disclaimer-text {
+        font-size: 10px !important;
+    }
+
+    .signature-line,
+    .signature-label {
+        font-size: 14px !important;
+    }
+
+    .form-row,
+    .time-row {
+        padding: 5px 3px !important;
+    }
+
+    .checkbox-item label {
+        font-size: 9px !important;
+    }
+
+    .totals-cell,
+    .final-cell,
+    .header-cell {
+        padding: 3px !important;
+        font-size: 10px !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .ticket-body {
+        padding: 0 !important;
+        font-size: 10pt !important;
+    }
+
+    .ticket-container {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Ensure all content is visible when printing */
+    .main-content {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .left-column,
+    .middle-column,
+    .right-column {
+        width: initial !important;
+    }
+
+    /* Ensure borders print correctly */
+    .form-row,
+    .time-row,
+    .product-cell,
+    .header-cell,
+    .totals-cell,
+    .final-cell {
+        border-color: #139a6e !important;
+    }
+}
